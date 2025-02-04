@@ -2,7 +2,9 @@
 {
   wayland.windowManager.hyprland.settings = {
     "$terminal" = "foot";
-    "$menu" = "walker";
+    "$menu" = "fuzzel";
+    "$browser" = "firefox";
+    "$obsidian" = "NIXOS_OZONE_WL=1 obsidian";
     exec-once = [
       "fcitx5 -d -r"
       "fcitx5-remote -r"
@@ -10,7 +12,8 @@
       "waybar"
       "hyprshade on blue-light-filter"
       "[workspace special silent] $terminal"
-      "[workspace 1 silent] firefox"
+      "[workspace 1 silent] $browser"
+      "[workspace 2 silent] $obsidian"
     ];
     windowrule = [ "pseudo, noblur, class:(fcitx)" ];
     windowrulev2 = [ "noblur,class:^()$,title:^()$" ];

@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./atuin.nix
@@ -13,11 +13,16 @@
     ./lazygit.nix
     ./ripgrep.nix
     ./starship.nix
-    ./wl-clipboard.nix
     ./zsh.nix
     ./zoxide.nix
 
     ./nushell
     ./zellij
+  ];
+  home.packages = [
+    pkgs.wl-clipboard
+    pkgs.du-dust
+    pkgs.procs
+    pkgs.xh
   ];
 }
