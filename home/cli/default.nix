@@ -27,5 +27,6 @@
     du-dust
     procs
     xh
+    scooter
   ];
 }
